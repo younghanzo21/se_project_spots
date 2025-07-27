@@ -10,7 +10,7 @@
   border-radius: 8px;
 }
 
-.profile_column {
+.profile__column {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -128,7 +128,7 @@
     margin: 0 auto;
   }
 
-  .profile_column {
+  .profile__column {
     margin: 0 0 20px;
   }
 
