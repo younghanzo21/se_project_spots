@@ -13,7 +13,6 @@
 .profile__column {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
 }
 
 .profile__name {
@@ -33,7 +32,7 @@
 }
 
 .profile__description {
-  margin: 0 0 114px;
+  margin: 0;
   font-family: "Poppins", "Arial", sans-serif;
   font-style: medium;
   font-size: 16px;
@@ -49,6 +48,7 @@
 }
 
 .profile__edit-button {
+  margin-top: auto;
   font-family: "Poppins", "Arial", sans-serif;
   font-style: medium;
   font-weight: 500;
