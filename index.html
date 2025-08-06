@@ -121,6 +121,60 @@
       <footer class="footer">
         <p class="footer__copy-right">2023 © Spots</p>
       </footer>
+      <div class="modal modal_is-opened">
+        <div class="modal__container">
+          <button type="button" class="modal__close-button"></button>
+          <h2 class="modal__title">Edit profile</h2>
+          <form class="modal__form">
+            <label for="name-input" class="modal__label"
+              >Name
+              <input
+                type="text"
+                id="name-input"
+                class="modal__input"
+                placeholder="Type your name"
+              />
+            </label>
+            <label for="description-input" class="modal__label"
+              >Description
+              <input
+                type="text"
+                id="description-input"
+                class="modal__input"
+                placeholder="Describe yourself"
+              />
+            </label>
+            <button type="submit" class="modal__submit-button">Save</button>
+          </form>
+        </div>
+      </div>
+      <div class="modal modal_is-opened">
+        <div class="modal__container">
+          <button type="button" class="modal__close-button"></button>
+          <h2 class="modal__title">New Post</h2>
+          <form class="modal__form">
+            <label for="image" class="modal__label"
+              >Image link
+              <input
+                type="url"
+                id="image-input"
+                class="modal__input"
+                placeholder="Paste a link to the picture"
+              />
+            </label>
+            <label for="caption-input" class="modal__label"
+              >Caption
+              <input
+                type="text"
+                id="caption-input"
+                class="modal__input"
+                placeholder="Type your caption"
+              />
+            </label>
+            <button type="submit" class="modal__submit-button">Save</button>
+          </form>
+        </div>
+      </div>
     </div>
   </body>
 </html>
