@@ -35,10 +35,20 @@ const editProfileModal = document.querySelector("#edit-profile-modal");
 const editProfileCloseBtn = editProfileModal.querySelector(
   ".modal__close-button"
 );
+const editProfileNameInput = editProfileModal.querySelector("#name-input");
+const editProfileDescriptionInput =
+  editProfileModal.querySelector("#description-input");
+const editProfileForm1 = editProfileModal.querySelector(".modal__form");
 
 const newPostBtn = document.querySelector(".profile__post-button");
 const newPostModal = document.querySelector("#new-post-modal");
 const newPostCloseBtn = newPostModal.querySelector(".modal__close-button");
+const newPostForm1 = newPostModal.querySelector(".modal__form");
+const newPostImageInput = newPostModal.querySelector("#image-input");
+const newPostCaptionInput = newPostModal.querySelector("#caption-input");
+
+const profileName1 = document.querySelector(".profile__name");
+const profileDescription1 = document.querySelector(".profile__description");
 
 newPostBtn.addEventListener("click", function () {
   newPostModal.classList.add("modal_is-opened");
@@ -50,11 +60,35 @@ newPostCloseBtn.addEventListener("click", function () {
 
 editProfileBtn.addEventListener("click", function () {
   editProfileModal.classList.add("modal_is-opened");
+  editProfileNameInput.value = profileName1.textContent;
+  editProfileDescriptionInput.value = profileDescription1.textContent;
 });
 
 editProfileCloseBtn.addEventListener("click", function () {
   editProfileModal.classList.remove("modal_is-opened");
 });
+
+function handleProfileFormSubmit(evt) {
+  evt.preventDefault();
+
+  profileName1.textContent = editProfileNameInput.value;
+  profileDescription1.textContent = editProfileDescriptionInput.value;
+
+  editProfileModal.classList.remove("modal_is-opened");
+}
+
+editProfileForm1.addEventListener("submit", handleProfileFormSubmit);
+
+function handleAddCardSubmit(evt) {
+  evt.preventDefault();
+
+  console.log(newPostImageInput.value);
+  console.log(newPostCaptionInput.value);
+
+  newPostModal.classList.remove("modal_is-opened");
+}
+
+newPostForm1.addEventListener("submit", handleAddCardSubmit);
 
 initialCards.forEach(function (card) {
   console.log(card.name);
